@@ -1,0 +1,18 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "ca.bcit.comp2052.a01034486.week9"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "ca.bcit.comp2052.a01034486.week9"
+    }
+  },
+  "dependent_plugins": {}
+}

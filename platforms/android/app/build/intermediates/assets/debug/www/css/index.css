@@ -1,0 +1,56 @@
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+}
+
+h1, h4 {
+    margin: auto !important;
+    text-transform: uppercase;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+pre {
+    font-family: sans-serif;
+    line-height: 1.4em;
+}
+
+.btn-up {
+    border: none;
+    padding: 0;
+    margin: 0 5px 0 0;
+    pointer-events: none;
+}
+
+.trail {
+    font-weight: normal;
+    margin: 0 0 2px 0;
+    padding: .2em .4em;
+    pointer-events: none;
+}
+
+.path-active {
+    color: #38c !important;
+    pointer-events: auto;
+}
+
+#file-explorer a {
+    color: #38c;
+    font-weight: normal;
+}
+
+.hidden {
+    display: none !important;
+}

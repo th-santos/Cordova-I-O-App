@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>Cordova I/O App</title>
+    </head>
+    <body>
+        <div id="wrapper" data-role="page">
+            <header data-role="header">
+                <h1>Cordova I/O App</h1>
+            </header>
+        
+            <main class="ui-grid-a ui-responsive">
+                <div class="ui-block-a">
+                    <div class="ui-body">
+                        <label for="input-file-name">File name:</label>
+                        <input id="input-file-name" type="text">
+                        <label for="textarea-file-content">Type text to write to file:</label>
+                        <textarea cols="40" rows="8" id="textarea-file-content"></textarea>
+
+                        <fieldset data-role="controlgroup" data-mini="true">
+                            <legend>If the file already exists:</legend>
+                            <input name="write-option" id="overwrite-content" value="overwrite" checked="checked" type="radio">
+                            <label for="overwrite-content">Overwrite content</label>
+                            <input name="write-option" id="append-content" value="append" type="radio">
+                            <label for="append-content">Append content</label>
+                        </fieldset>
+
+                        <button id="btn-write-file" class="ui-btn ui-shadow ui-corner-all">Write File</button>
+                    </div>
+                    <div class="ui-body">
+                        <span id="head-read-file" class="hidden">Text read from file:</span>
+                        <pre id="div-file-content" class="ui-body ui-body-a ui-corner-all hidden">
+                            <!-- file content -->
+                        </pre>
+                        <button id="btn-read-file" class="ui-btn ui-shadow ui-corner-all">Read File</button>
+                    </div>
+                </div>
+                <div class="ui-block-b">
+                    <div class="ui-body">
+                        <button id="btn-file-explorer" class="ui-btn ui-shadow ui-corner-all">Show Directory Contents</button>
+                        <p id="path"></p>
+                        <!-- 'data-filter' will add <form class="ui-filterable"></form> here -->
+                        <ul id="file-explorer" data-role="listview" data-autodividers="true" data-inset="true" data-filter="true"></ul>
+                    </div>
+                </div>
+            </main>
+        
+            <footer data-role="footer">
+                <h4>&copy; Thiago Santos</h4>
+            </footer>
+        </div>
+
+        <script src="cordova.js"></script>
+        <script src="js/jquery-2.1.4.min.js"></script>
+        <script src="js/jquery.mobile-1.4.5.min.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>
