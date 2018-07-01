@@ -44,12 +44,11 @@ $(function() {
                 null, 
                 () => {
                     console.log('Access allowed');
-                    return true;
+                    app.listPath();
                 },  
                 () => {
                     console.log('Access not allowed');
                     view.showToast('You need to give the app access to use all the features.', 'long', true);
-                    return false;
                 }
             );
         },
@@ -221,9 +220,7 @@ $(function() {
             // Event Listeners
             this.$btnWriteFile.click(() => {view.getInputsAnd('write');});
             this.$btnReadFile.click(() => {view.getInputsAnd('read');});
-            this.$btnFileExplorer.click(() => {
-                if (app.askAccess()) app.listPath();
-            });
+            this.$btnFileExplorer.click(() => {app.askAccess();});
         },
 
         getInputsAnd: function (option) {
